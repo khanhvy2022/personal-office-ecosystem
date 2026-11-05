@@ -1,0 +1,162 @@
+{
+  "timestamp": "2026-11-04T21:05:00+07:00",
+  "results": [
+    {
+      "file": "01_vietnamese_unicode_small.docx",
+      "path": "F:\\word và Excel\\tests\\corpus\\docx\\01_vietnamese_unicode_small.docx",
+      "format": "DOCX",
+      "size_bytes": 2819,
+      "sha256": "3ab851999d1fd2080e1938ddc77c4db19c92a4589329c8e44216738799e82a37",
+      "roundtrip_zip_sha256": "3ab851999d1fd2080e1938ddc77c4db19c92a4589329c8e44216738799e82a37",
+      "open_parse_ms": 29.892,
+      "validate_edit_ms": 0.02,
+      "save_package_ms": 34.993,
+      "parts_count": 7,
+      "parts_preserved": true,
+      "byte_exact_entries_preserved": true,
+      "checks": {
+        "vietnamese_unicode_preserved": true,
+        "styles_part_preserved": true,
+        "header_footer_preserved": true,
+        "image_preserved": true,
+        "table_preserved": true
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "02_tables_and_links_medium.docx",
+      "path": "F:\\word và Excel\\tests\\corpus\\docx\\02_tables_and_links_medium.docx",
+      "format": "DOCX",
+      "size_bytes": 3270,
+      "sha256": "c320196d8b8cf6fa702a7ba1ec82b2ebe90338ca2aa7fec7b06c6ae056f64376",
+      "roundtrip_zip_sha256": "c320196d8b8cf6fa702a7ba1ec82b2ebe90338ca2aa7fec7b06c6ae056f64376",
+      "open_parse_ms": 25.958,
+      "validate_edit_ms": 0.035,
+      "save_package_ms": 0.957,
+      "parts_count": 7,
+      "parts_preserved": true,
+      "byte_exact_entries_preserved": true,
+      "checks": {
+        "vietnamese_unicode_preserved": true,
+        "styles_part_preserved": true,
+        "header_footer_preserved": true,
+        "image_preserved": true,
+        "table_preserved": true
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "03_images_headers_pagebreaks.docx",
+      "path": "F:\\word và Excel\\tests\\corpus\\docx\\03_images_headers_pagebreaks.docx",
+      "format": "DOCX",
+      "size_bytes": 3162,
+      "sha256": "e33c0a65c32b7114838bb73b4bf1f6e88382a93a05d1b8eeb7c73938bcfd590c",
+      "roundtrip_zip_sha256": "e33c0a65c32b7114838bb73b4bf1f6e88382a93a05d1b8eeb7c73938bcfd590c",
+      "open_parse_ms": 29.535,
+      "validate_edit_ms": 0.02,
+      "save_package_ms": 0.694,
+      "parts_count": 8,
+      "parts_preserved": true,
+      "byte_exact_entries_preserved": true,
+      "checks": {
+        "vietnamese_unicode_preserved": true,
+        "styles_part_preserved": true,
+        "header_footer_preserved": true,
+        "image_preserved": true,
+        "table_preserved": true
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "04_large_multipage_10p.docx",
+      "path": "F:\\word và Excel\\tests\\corpus\\docx\\04_large_multipage_10p.docx",
+      "format": "DOCX",
+      "size_bytes": 3180,
+      "sha256": "0e39f6f6abc0a83ae1e993bb0b8385a39cf9363f0c986516e81c7165392c58e8",
+      "roundtrip_zip_sha256": "0e39f6f6abc0a83ae1e993bb0b8385a39cf9363f0c986516e81c7165392c58e8",
+      "open_parse_ms": 27.893,
+      "validate_edit_ms": 0.068,
+      "save_package_ms": 0.998,
+      "parts_count": 7,
+      "parts_preserved": true,
+      "byte_exact_entries_preserved": true,
+      "checks": {
+        "vietnamese_unicode_preserved": true,
+        "styles_part_preserved": true,
+        "header_footer_preserved": true,
+        "image_preserved": true,
+        "table_preserved": true
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "01_formulas_multisheet_small.xlsx",
+      "path": "F:\\word và Excel\\tests\\corpus\\xlsx\\01_formulas_multisheet_small.xlsx",
+      "format": "XLSX",
+      "size_bytes": 3727,
+      "sha256": "1eac7443c6b14772aeaf95c983328698631783c20d38d556e7896bb812905722",
+      "roundtrip_zip_sha256": "1eac7443c6b14772aeaf95c983328698631783c20d38d556e7896bb812905722",
+      "open_parse_ms": 6.176,
+      "validate_edit_ms": 0.027,
+      "save_package_ms": 0.923,
+      "parts_count": 7,
+      "parts_preserved": true,
+      "byte_exact_entries_preserved": true,
+      "checks": {
+        "multisheet_preserved": true,
+        "formulas_preserved": true,
+        "merge_cells_preserved": true,
+        "conditional_formatting_preserved": true,
+        "data_validation_preserved": true,
+        "freeze_pane_preserved": true
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "02_formatting_merges_validation_medium.xlsx",
+      "path": "F:\\word và Excel\\tests\\corpus\\xlsx\\02_formatting_merges_validation_medium.xlsx",
+      "format": "XLSX",
+      "size_bytes": 7653,
+      "sha256": "2c15cae03d4e44f1893783cb77d48714157e655800344f56f283080a0151bf6e",
+      "roundtrip_zip_sha256": "2c15cae03d4e44f1893783cb77d48714157e655800344f56f283080a0151bf6e",
+      "open_parse_ms": 6.659,
+      "validate_edit_ms": 0.055,
+      "save_package_ms": 1.031,
+      "parts_count": 7,
+      "parts_preserved": true,
+      "byte_exact_entries_preserved": true,
+      "checks": {
+        "multisheet_preserved": true,
+        "formulas_preserved": true,
+        "merge_cells_preserved": true,
+        "conditional_formatting_preserved": true,
+        "data_validation_preserved": true,
+        "freeze_pane_preserved": true
+      },
+      "status": "PASS"
+    },
+    {
+      "file": "03_large_dataset_2000rows.xlsx",
+      "path": "F:\\word và Excel\\tests\\corpus\\xlsx\\03_large_dataset_2000rows.xlsx",
+      "format": "XLSX",
+      "size_bytes": 62031,
+      "sha256": "b09aef22395e57103a0f85d6b2f625affe1b161a120e67ab31057086d16aaaf8",
+      "roundtrip_zip_sha256": "b09aef22395e57103a0f85d6b2f625affe1b161a120e67ab31057086d16aaaf8",
+      "open_parse_ms": 7.303,
+      "validate_edit_ms": 0.645,
+      "save_package_ms": 4.613,
+      "parts_count": 7,
+      "parts_preserved": true,
+      "byte_exact_entries_preserved": true,
+      "checks": {
+        "multisheet_preserved": true,
+        "formulas_preserved": true,
+        "merge_cells_preserved": true,
+        "conditional_formatting_preserved": true,
+        "data_validation_preserved": true,
+        "freeze_pane_preserved": true
+      },
+      "status": "PASS"
+    }
+  ]
+}

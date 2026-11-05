@@ -1,0 +1,18 @@
+# P1.5 SHA-256 CHECKSUMS MANIFEST
+# Timestamp: 2026-11-05T07:40:00+07:00
+
+# Built APK Binaries
+ee4bc6b19b9718d59532704a63f0def41f89a8370f02a5a4889ffe9666ba71e3  EWOfficeEcosystem/app/documents/build/outputs/apk/debug/documents-debug.apk
+8e7159b7e377609de0f24193eb2413004273031e0f00d0b6d78170dd23afa0c8  EWOfficeEcosystem/app/sheets/build/outputs/apk/debug/sheets-debug.apk
+
+# Upstream Collabora Release Binary (Verified against F-Droid index)
+79e72f810d711706d205a9ff457b4bb830c607a2b988cf44246829ec4593c393  downloads/collabora-office-mobile-26.04.4.2-937-release-arm64-v8a-2026-10-05.apk
+
+# P0 Protected Test Corpus
+2c589b9868c2eeec7f7b3dfd2a02b6623aa3a6a97858c6e262a4ebf04bc18843  tests/corpus/docx/01_vietnamese_unicode_small.docx
+c320196d8b8cf6fa702a7ba1ec82b2ebe90338ca2aa7fec7b06c6ae056f64376  tests/corpus/docx/02_tables_and_links_medium.docx
+e33c0a65c32b7114838bb73b4bf1f6e88382a93a05d1b8eeb7c73938bcfd590c  tests/corpus/docx/03_images_headers_pagebreaks.docx
+0e39f6f6abc0a83ae1e993bb0b8385a39cf9363f0c986516e81c7165392c58e8  tests/corpus/docx/04_large_multipage_10p.docx
+b8dca5f69c0d4bb8cb2e9334fb9e2d3bbfe2df497ca194514da075fb56fb5fb7  tests/corpus/xlsx/01_formulas_multisheet_small.xlsx
+a870a48b9487c645b2cf0f951811a2f6460fae2474ef4b4b8c9d09033320c9ea  tests/corpus/xlsx/02_formatting_merges_validation_medium.xlsx
+c943ee6c25e865f1e84df944ebda9d7a224a9e5256e48d3e230fae7a05fead02  tests/corpus/xlsx/03_large_dataset_2000rows.xlsx

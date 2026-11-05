@@ -1,0 +1,7 @@
+# Binary downloads & Gradle build outputs (tracked by SHA-256 in P1_EVIDENCE.json)
+downloads/
+EWOfficeEcosystem/.gradle/
+EWOfficeEcosystem/**/build/
+EWOfficeEcosystem/engine/collabora-runtime/src/main/jniLibs/
+EWOfficeEcosystem/engine/collabora-runtime/src/main/assets/
+EWOfficeEcosystem/local.properties

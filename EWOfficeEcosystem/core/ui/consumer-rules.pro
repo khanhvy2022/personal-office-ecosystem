@@ -1,0 +1,1 @@
+-keep class com.eurowindow.office.core.ui.** { *; }

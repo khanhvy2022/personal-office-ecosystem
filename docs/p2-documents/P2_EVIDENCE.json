@@ -1,0 +1,111 @@
+{
+  "phase": "P2",
+  "project": "EW Personal Office Ecosystem",
+  "application": "EW Documents",
+  "application_id": "com.eurowindow.documents",
+  "timestamp": "2026-11-05T07:58:00+07:00",
+  "branch": "p2-documents-prototype",
+  "baseline_commit": "0edd8ea",
+  "toolchain": {
+    "os": "Windows 11",
+    "jdk": "17.0.20.1+1",
+    "gradle": "8.7",
+    "compile_sdk": 35,
+    "target_sdk": 35,
+    "min_sdk": 26,
+    "ndk_abi": "arm64-v8a"
+  },
+  "protected_core": {
+    "total_files_audited": 5332,
+    "modified_files": 0,
+    "mismatches": 0,
+    "missing": 0,
+    "baseline_manifest": "logs/protected_core_baseline_hashes.json",
+    "integrity_status": "UNTOUCHED_AND_VERIFIED"
+  },
+  "app_isolation": {
+    "documents_app_id": "com.eurowindow.documents",
+    "sheets_app_id": "com.eurowindow.sheets",
+    "sheets_codebase_modified": false,
+    "shared_namespace_count": 0,
+    "shared_uid": null
+  },
+  "apk_metadata": {
+    "file_name": "documents-debug.apk",
+    "relative_path": "app/documents/build/outputs/apk/debug/documents-debug.apk",
+    "size_bytes": 137698059,
+    "size_mb": 131.32,
+    "sha256": "4BC78C9D3F8818BB7CEF7DF00A200F10FDE39387D139525A46D599D688E88C60",
+    "signature_scheme_v2": true,
+    "abi": "arm64-v8a"
+  },
+  "security_remediations": {
+    "s1_internet_permission": {
+      "declared": false,
+      "removed_by_manifest_merger": true,
+      "verified_by_aapt2": true
+    },
+    "s2_manage_external_storage": {
+      "declared": false,
+      "removed_by_manifest_merger": true,
+      "verified_by_aapt2": true
+    },
+    "s3_cache_scrubbing": {
+      "guard_class": "com.eurowindow.office.core.security.TempFileGuard",
+      "verified_by_unit_test": true
+    },
+    "s4_ipc_isolation": {
+      "distinct_file_provider": "com.eurowindow.documents.fileprovider",
+      "distinct_clipboard": "com.eurowindow.documents.clipboard",
+      "distinct_database": "ew_documents.db",
+      "verified_by_unit_test": true
+    }
+  },
+  "test_execution": {
+    "documents_unit_tests": {
+      "task": ":app:documents:testDebugUnitTest",
+      "total": 5,
+      "passed": 5,
+      "failed": 0,
+      "skipped": 0,
+      "status": "PASS"
+    },
+    "compatibility_tests": {
+      "task": ":tests:compatibility:testDebugUnitTest",
+      "total": 2,
+      "passed": 2,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "integration_tests": {
+      "task": ":tests:integration:testDebugUnitTest",
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "security_tests": {
+      "task": ":tests:security:testDebugUnitTest",
+      "total": 3,
+      "passed": 3,
+      "failed": 0,
+      "status": "PASS"
+    }
+  },
+  "acceptance_gates": {
+    "G1_APPLICATION_SHELL": "PASS",
+    "G2_SAF_MANAGEMENT": "PASS",
+    "G3_COLLABORA_INTEGRATION": "PASS",
+    "G4_BASIC_EDITING": "PASS",
+    "G5_FORMATTING_TOOLS": "PASS",
+    "G6_SAVE_AND_SAVE_AS": "PASS",
+    "G7_EXPORT_PDF": "PASS",
+    "G8_CORPUS_COMPATIBILITY": "PASS",
+    "G9_SECURITY_VERIFICATION": "PASS",
+    "G10_PACKAGE_INSPECTION": "PASS",
+    "G11_PHYSICAL_DEVICE_VALIDATION": "BLOCKED",
+    "G12_PHYSICAL_PERFORMANCE_METRICS": "BLOCKED"
+  },
+  "final_decision": "NOT_READY_FOR_P3",
+  "decision_reason": "Gate G11 and G12 blocked awaiting physical Android device connection; all host-side implementation, security, and packaging gates fully verified."
+}

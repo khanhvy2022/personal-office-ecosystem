@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EW Personal Office — Bộ Đôi Native Siêu Nhẹ (2 MB)</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        :root {
+            --navy-900: #0F2E5A;
+            --blue-600: #2260B4;
+            --green-700: #166534;
+            --green-600: #15803D;
+            --play-green: #01875F;
+            --play-green-hover: #016B4B;
+            --bg: #F8F9FA;
+            --card: #FFFFFF;
+            --text-main: #202124;
+            --text-sub: #5F6368;
+            --border: #DADCE0;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg); color: var(--text-main); line-height: 1.5; padding-bottom: 50px;
+        }
+        .top-bar {
+            background: var(--card); border-bottom: 1px solid var(--border);
+            padding: 14px 24px; display: flex; align-items: center; justify-content: space-between;
+            position: sticky; top: 0; z-index: 100;
+        }
+        .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--navy-900); }
+        .brand-icon {
+            width: 36px; height: 36px; background: linear-gradient(135deg, var(--navy-900), var(--blue-600));
+            color: #fff; font-size: 18px; font-weight: bold; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .verified-badge {
+            background: #E6F4EA; color: #137333; padding: 5px 12px; border-radius: 999px;
+            font-size: 12px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;
+        }
+        .container { max-width: 640px; margin: 24px auto; padding: 0 16px; }
+        .hero { text-align: center; margin-bottom: 24px; }
+        .hero h1 { font-size: 24px; color: var(--navy-900); font-weight: 800; margin-bottom: 6px; }
+        .hero p { font-size: 14px; color: var(--text-sub); }
+
+        .app-card {
+            background: var(--card); border-radius: 16px; padding: 22px; margin-bottom: 24px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08); transition: transform 0.2s;
+        }
+        .card-word { border: 2px solid #3B82F6; }
+        .card-excel { border: 2px solid #22C55E; }
+
+        .app-row { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+        .app-logo {
+            width: 58px; height: 58px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+            font-size: 28px; font-weight: bold; color: white; flex-shrink: 0;
+        }
+        .logo-word {
+            background: linear-gradient(135deg, #1A5FB4, #3584E4);
+            box-shadow: 0 4px 12px rgba(26, 95, 180, 0.3);
+        }
+        .logo-excel {
+            background: linear-gradient(135deg, #15803D, #22C55E);
+            box-shadow: 0 4px 12px rgba(21, 128, 61, 0.3);
+        }
+        .app-info h2 { font-size: 20px; font-weight: 700; color: var(--text-main); }
+        .app-info p { font-size: 13px; color: var(--text-sub); }
+        .pills { display: flex; gap: 6px; margin-top: 4px; flex-wrap: wrap; }
+        .pill { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 6px; background: #E8EAED; color: #3C4043; }
+        .pill-green { background: #CEEAD6; color: #0D652D; font-weight: 700; }
+        .pill-highlight { background: #FEF3C7; color: #92400E; font-weight: 700; }
+
+        .feature-list {
+            background: #F8FAFC; border-radius: 10px; padding: 14px 16px; margin-bottom: 18px;
+            font-size: 13.5px; line-height: 1.6; border: 1px solid #E2E8F0;
+        }
+        .feature-list li { margin-left: 18px; margin-bottom: 4px; color: #334155; }
+        .feature-list strong { color: var(--navy-900); }
+
+        .btn-install {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            width: 100%; padding: 16px; border-radius: 12px; text-decoration: none;
+            color: white; font-weight: 700; font-size: 16.5px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: background 0.2s, transform 0.1s;
+        }
+        .btn-word { background: #1A5FB4; }
+        .btn-word:hover { background: #154e96; }
+        .btn-excel { background: #15803D; }
+        .btn-excel:hover { background: #0f622e; }
+        .btn-install:active { transform: scale(0.98); }
+
+        .qr-section {
+            background: #F1F3F4; border-radius: 12px; padding: 16px; text-align: center;
+            margin-top: 18px; border: 1px dashed #BDC1C6;
+        }
+        .qr-section h3 { font-size: 13.5px; color: var(--navy-900); margin-bottom: 10px; }
+        .qr-box { display: inline-block; padding: 8px; background: #fff; border-radius: 8px; }
+
+        .guide {
+            background: #EFF6FF; border-radius: 12px; padding: 16px; margin-top: 20px;
+            font-size: 13.5px; color: #1E40AF; line-height: 1.6; border: 1px solid #BFDBFE;
+        }
+        .guide h4 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+        .guide ol { margin-left: 18px; }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="brand">
+            <div class="brand-icon">EW</div>
+            <span>EW Personal Office Ecosystem</span>
+        </div>
+        <div class="verified-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            Native Android • Siêu Nhẹ 2 MB
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="hero">
+            <h1>Bộ Đôi Office Native Siêu Nhẹ</h1>
+            <p>Thuần Cảm Ứng Di Động • Chữ To Rõ • Mở Tức Thì Trong 0.2 Giây • 100% Offline</p>
+        </div>
+
+        <!-- APP 1: EW DOCUMENTS (WORD) -->
+        <div class="app-card card-word">
+            <div class="app-row">
+                <div class="app-logo logo-word">W</div>
+                <div class="app-info">
+                    <h2>EW Documents Light</h2>
+                    <p>Soạn thảo & Đọc DOCX chuẩn Native (Word)</p>
+                    <div class="pills">
+                        <span class="pill pill-green">v0.2.0 Native Light</span>
+                        <span class="pill pill-highlight">2.01 MB (Giảm 98.5%)</span>
+                        <span class="pill">0.2s Mở app</span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="feature-list">
+                <li>🚀 <strong>Dung lượng 2.01 MB:</strong> Đã loại bỏ 131 MB mã C++ cồng kềnh, tải và cài đặt trong 2 giây.</li>
+                <li>👍 <strong>Thanh định dạng dưới đáy (Bottom Bar):</strong> Dễ dàng in đậm, in nghiêng, đổi màu, căn lề, chèn bảng chỉ bằng 1 ngón tay cái.</li>
+                <li>📝 <strong>Đọc & Soạn DOCX:</strong> Giữ nguyên định dạng Microsoft Word, gõ tiếng Việt có dấu mượt mà.</li>
+                <li>📄 <strong>Xuất PDF Vector sắc nét:</strong> Xuất file PDF chuẩn A4 có số trang và lề tài liệu đẹp mắt.</li>
+                <li>🔒 <strong>An toàn tuyệt đối:</strong> 0 quyền Internet, 0 quyền truy cập toàn bộ thẻ nhớ, 0 quảng cáo.</li>
+            </ul>
+
+            <a href="/install-documents.apk" class="btn-install btn-word">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+                Tải EW Documents (2.01 MB)
+            </a>
+
+            <div class="qr-section">
+                <h3>Quét mã QR để tải EW Documents về điện thoại:</h3>
+                <div id="qrcode-doc" class="qr-box"></div>
+            </div>
+        </div>
+
+        <!-- APP 2: EW SHEETS (EXCEL) -->
+        <div class="app-card card-excel">
+            <div class="app-row">
+                <div class="app-logo logo-excel">X</div>
+                <div class="app-info">
+                    <h2>EW Sheets Light</h2>
+                    <p>Bảng tính & Công thức XLSX chuẩn Native (Excel)</p>
+                    <div class="pills">
+                        <span class="pill pill-green">v0.2.0 Native Light</span>
+                        <span class="pill pill-highlight">2.02 MB (Giảm 98.5%)</span>
+                        <span class="pill">0.2s Mở app</span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="feature-list">
+                <li>🚀 <strong>Dung lượng 2.02 MB:</strong> Khởi động tức thì, hoạt động mượt mà ngay cả trên máy cấu hình yếu.</li>
+                <li>📊 <strong>Lưới bảng tính tương tác:</strong> Chạm ô để nhập liệu, chọn màu nền, căn lề trái/giữa/phải, thêm dòng/cột.</li>
+                <li>📐 <strong>Thanh công thức & Tab nhiều Sheet:</strong> Hỗ trợ nhập công thức nhanh `=SUM`, `=AVERAGE`, quản lý nhiều Sheet.</li>
+                <li>📑 <strong>Xuất PDF khổ ngang & CSV:</strong> In báo giá/dự toán ra PDF khổ A4 ngang hoặc xuất dữ liệu CSV.</li>
+                <li>🔒 <strong>Độc lập & Bảo mật:</strong> Cơ sở dữ liệu riêng biệt `ew_sheets.db`, 0 quyền Internet, không thu thập dữ liệu.</li>
+            </ul>
+
+            <a href="/install-sheets.apk" class="btn-install btn-excel">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+                Tải EW Sheets (2.02 MB)
+            </a>
+
+            <div class="qr-section">
+                <h3>Quét mã QR để tải EW Sheets về điện thoại:</h3>
+                <div id="qrcode-sheet" class="qr-box"></div>
+            </div>
+        </div>
+
+        <div class="guide">
+            <h4>💡 Hướng dẫn cài đặt nhanh:</h4>
+            <ol>
+                <li>Mở Camera điện thoại quét mã QR tương ứng hoặc truy cập <code>http://192.168.1.10:8899</code> trên trình duyệt Chrome.</li>
+                <li>Bấm <strong>Tải & Cài Đặt</strong> -> Chọn <strong>Vẫn tải xuống</strong> khi có cảnh báo file APK ngoài Play Store.</li>
+                <li>Tải xong bấm <strong>Mở</strong> -> Chọn <strong>Cài đặt</strong> để trải nghiệm ngay cả 2 ứng dụng độc lập!</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        var host = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port;
+        new QRCode(document.getElementById("qrcode-doc"), {
+            text: host + "/install-documents.apk",
+            width: 140,
+            height: 140,
+            colorDark : "#0F2E5A",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.M
+        });
+        new QRCode(document.getElementById("qrcode-sheet"), {
+            text: host + "/install-sheets.apk",
+            width: 140,
+            height: 140,
+            colorDark : "#15803D",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.M
+        });
+    </script>
+</body>
+</html>

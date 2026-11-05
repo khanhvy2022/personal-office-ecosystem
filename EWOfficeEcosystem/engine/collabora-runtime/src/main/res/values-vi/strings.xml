@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="temp_file_saving_disabled">Tệp này ở chế độ chỉ đọc, đã tắt lưu tự động.</string>
+    <string name="storage_permission_required">Cần quyền truy cập bộ nhớ</string>
+    <string name="failed_to_load_file">Không thể xác định tệp cần mở</string>
+    <string name="failed_to_insert_image">Không thể chèn hình ảnh</string>
+    <string name="preparing_for_the_first_start_after_an_update">Đang khởi tạo bộ máy tài liệu lần đầu</string>
+    <string name="rate_our_app_title">EW Personal Office</string>
+    <string name="rate_our_app_text">Chế độ ngoại tuyến bảo mật</string>
+    <string name="later">Đóng</string>
+    <string name="rate_now">OK</string>
+    <string name="exiting">Đang đóng tài liệu...</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Spreadsheet Card Outer Border -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#22C55E"
+        android:strokeWidth="1.8"
+        android:pathData="M31,24L77,24C79.2,24 81,25.8 81,28L81,80C81,82.2 79.2,84 77,84L31,84C28.8,84 27,82.2 27,80L27,28C27,25.8 28.8,24 31,24Z" />
+
+    <!-- Spreadsheet White Card Body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M31,25L77,25C78.7,25 80,26.3 80,28L80,80C80,81.7 78.7,83 77,83L31,83C29.3,83 28,81.7 28,80L28,28C28,26.3 29.3,25 31,25Z" />
+
+    <!-- Excel Green Header Badge -->
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M32,32h44v24h-44z" />
+
+    <!-- Elegant Stylized White "X" Letter -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,36L54,44L60,36L64,36L56.5,45L64.5,54L60.5,54L54,46L47.5,54L43.5,54L51.5,45L44,36Z" />
+
+    <!-- Spreadsheet Grid Lines and Cells -->
+    <path
+        android:fillColor="#BBF7D0"
+        android:pathData="M32,60h13v8h-13z" />
+    <path
+        android:fillColor="#F0FDF4"
+        android:pathData="M47,60h13v8h-13z" />
+    <path
+        android:fillColor="#F0FDF4"
+        android:pathData="M62,60h14v8h-14z" />
+
+    <path
+        android:fillColor="#BBF7D0"
+        android:pathData="M32,70h13v8h-13z" />
+    <path
+        android:fillColor="#F0FDF4"
+        android:pathData="M47,70h13v8h-13z" />
+    <path
+        android:fillColor="#DCFCE7"
+        android:pathData="M62,70h14v8h-14z" />
+
+    <!-- Precision Cell Divider Lines -->
+    <path
+        android:fillColor="#15803D"
+        android:pathData="M32,69h44v1.5h-44z" />
+</vector>

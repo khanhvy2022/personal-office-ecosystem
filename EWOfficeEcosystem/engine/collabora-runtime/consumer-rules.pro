@@ -1,0 +1,2 @@
+-keep class org.libreoffice.androidlib.** { *; }
+-keep class org.libreoffice.androidlib.lok.** { *; }

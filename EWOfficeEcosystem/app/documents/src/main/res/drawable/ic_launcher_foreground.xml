@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Document Shadow / Outer Border -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#C5A968"
+        android:strokeWidth="1.8"
+        android:pathData="M31,24L65,24L77,36L77,82C77,84.2 75.2,86 73,86L31,86C28.8,86 27,84.2 27,82L27,28C27,25.8 28.8,24 31,24Z" />
+
+    <!-- Document White Card Body -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,25L64,25L76,37L76,81C76,83 74.5,84.5 72.5,84.5L32,84.5C30,84.5 28.5,83 28.5,81L28.5,28.5C28.5,26.5 30,25 32,25Z" />
+
+    <!-- Folded Corner in Warm Gold -->
+    <path
+        android:fillColor="#C5A968"
+        android:pathData="M64,25L64,37L76,37Z" />
+
+    <!-- Word Blue Header Badge -->
+    <path
+        android:fillColor="#1A5FB4"
+        android:pathData="M33,40h38v20h-38z" />
+
+    <!-- Elegant Stylized White "W" Letter -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,44L41.5,56L44.5,47L47.5,47L50.5,56L54,44L57.5,44L52.5,57L49,57L46,48.5L43,57L39.5,57L34.5,44Z" />
+
+    <!-- Document Paragraph Lines -->
+    <path
+        android:fillColor="#2563EB"
+        android:pathData="M34,65h36v3h-36z" />
+    <path
+        android:fillColor="#94A3B8"
+        android:pathData="M34,71h28v2.5h-28z" />
+    <path
+        android:fillColor="#C5A968"
+        android:pathData="M34,76.5h32v2.5h-32z" />
+</vector>

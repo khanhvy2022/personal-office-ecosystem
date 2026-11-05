@@ -1,0 +1,77 @@
+{
+  "phase": "P1.5",
+  "project": "EW Personal Office Ecosystem",
+  "timestamp": "2026-11-05T07:40:00+07:00",
+  "git": {
+    "protected_baseline_commit": "e936f29660c16a4c5510896e6549ef6c131860f1",
+    "p1_commit": "7f691d6ad3f2358ab03d5ed1146dc1d08304c907",
+    "current_branch": "p1.5-integrity",
+    "p0_unmodified": true
+  },
+  "test_suite": {
+    "command": ".\\gradlew.bat clean testDebugUnitTest assembleDebug --rerun-tasks",
+    "exit_code": 0,
+    "total_tests": 6,
+    "passed_tests": 6,
+    "failed_tests": 0,
+    "modules": [
+      {
+        "module": ":tests:security",
+        "passed": 3,
+        "failed": 0
+      },
+      {
+        "module": ":tests:compatibility",
+        "passed": 2,
+        "failed": 0
+      },
+      {
+        "module": ":tests:integration",
+        "passed": 1,
+        "failed": 0
+      }
+    ]
+  },
+  "apk_inventory": {
+    "documents": {
+      "app_id": "com.eurowindow.documents",
+      "size_bytes": 137629706,
+      "size_mb": 131.25,
+      "sha256": "ee4bc6b19b9718d59532704a63f0def41f89a8370f02a5a4889ffe9666ba71e3",
+      "so_count": 17,
+      "dict_count": 0,
+      "has_internet_permission": false,
+      "has_storage_permission": false,
+      "allow_backup": false,
+      "signature_verified": true
+    },
+    "sheets": {
+      "app_id": "com.eurowindow.sheets",
+      "size_bytes": 137653589,
+      "size_mb": 131.28,
+      "sha256": "8e7159b7e377609de0f24193eb2413004273031e0f00d0b6d78170dd23afa0c8",
+      "so_count": 17,
+      "dict_count": 0,
+      "has_internet_permission": false,
+      "has_storage_permission": false,
+      "allow_backup": false,
+      "signature_verified": true
+    }
+  },
+  "adb_status": {
+    "connected_devices": 0,
+    "device_state": "NO_DEVICE"
+  },
+  "gates": {
+    "G1_failure_triage": "PASS",
+    "G2_docx_corpus_test": "PASS",
+    "G3_xlsx_corpus_test": "PASS",
+    "G4_native_packaging_test": "PASS",
+    "G5_apk_manifest": "PASS",
+    "G6_security_recheck": "PASS",
+    "G7_clean_rebuild": "PASS",
+    "G8_unit_test_suite": "PASS",
+    "G9_physical_device_validation": "BLOCKED",
+    "G10_protected_baseline": "PASS"
+  }
+}
